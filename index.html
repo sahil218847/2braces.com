@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- <script type="text/javascript" src="2braces_website.js"></script> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+    <title>my.2braces.com</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" src="https://www.2braces.com/images/perfect-logo.png" alt="plz wait">
+            <p> Made By: SAHIL PARASHAR</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li onclick="alert('website is in the progress')"><a href="#progress">C Programming</a></li>
+                <li onclick="alert('website is in the progress')"><a href="#progress">Data Structures</a></li>
+                <li ><a href="#right">C Questions</a></li>
+                <li onclick="alert('website is in the progress')"><a href="#progress"> Aptitude</a></li>
+                <li onclick="alert('website is in the progress')"><a href="#progress"> Electrical</a></li>
+                <li><img src="data:image/png;base64,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"
+                        alt=""></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="left">
+        <img src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo-500x313.png" alt=""><br>
+        <img src="https://1000logos.net/wp-content/uploads/2019/07/Instagram-Logo-2016%E2%80%93present-500x281.jpg"
+            alt=""><br>
+        <img src="https://1000logos.net/wp-content/uploads/2017/03/Color-of-the-LinkedIn-Logo-500x395.jpg" alt=""><br>
+        <img src="https://1000logos.net/wp-content/uploads/2021/04/Twitter-logo-500x281.png" alt="">
+    </section>
+    <section id="mid">
+        <ul>
+            <li class="heading1">Pointers - C Questions</li>
+            <ol>
+                <li class="heading2"><a href="#pointer1">Pointers Questions-1</a></li>
+                <li class="heading2" onclick="pointer2.style.display='block'"><a href="#pointer2">Pointers Questions-2</a></li>
+                <!-- <li class="heading2"><a href="#pointer3">Pointers Questions-3</a></li> -->
+            </ol>
+        </ul>
+        <ul>
+            <li class="heading1">Data Types - C Questions</li>
+            <ol>
+                <li class="heading2"onclick="datatype1.style.display='block'"><a href="#datatype1">Data Types Questions-1</a></li>
+                <li class="heading2"onclick="datatype2.style.display='block'"><a href="#datatype2">Data Types Questions-2</a></li>
+            </ol>
+        </ul>
+        <ul>
+            <li class="heading1">printf - C Questions</li>
+            <ol>
+                <li class="heading2"onclick="print1.style.display='block'"><a href="#print1">printf Questions-1</a></li>
+                <li class="heading2"onclick="print2.style.display='block'"><a href="#print2">printf Questions-2</a></li>
+                <!-- <li class="heading2"><a href="">printf Questions-3</a></li> -->
+            </ol>
+        </ul>
+    </section>
+    <section id="right">
+        <form name="quiz" id="quiz">
+        <!-- pointer1 -->
+        <section id="pointer1">
+            <div>
+                <p>
+                    <h3>1. What will be the output of the C program?</h3>
+                    <pre>
+                        int main(){
+                            int a = 130;
+                            char *ptr;
+                            ptr = (char *)&a;
+                            printf("%d ",*ptr);
+                            return 0;
+                        }
+                </pre>
+            </p>
+                <input type="radio" name="question1" id="1"value="1">
+                <label for="1">-126</label>
+                <br>
+                <input type="radio" name="question1" id="2"value="2">
+                <label for="2">Run Time Error</label>
+                <br>
+                <input type="radio" name="question1" id="3"value="3">
+                <label for="3">Garbage value</label>
+                <br>
+                <input type="radio" name="question1" id="4"value="4">
+                <label for="4">Compile Time Error</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>2. What will be the output of the C program?</h3>
+                    <pre>
+                            int main(){
+                                int i = 3;
+                                int *j;
+                                int **k;
+                                j = &i;
+                                k = &j;
+                                k++;
+                                printf("%d ",**k);
+                                return 0;
+                            }
+                    </pre>
+                </p>
+                <input type="radio" name="question2" id="5"value="5">
+                <label for="5">Garbage value</label>
+                <br>
+                <input type="radio" name="question2" id="6"value="6">
+                <label for="6">Compilation Error</label>
+                <br>
+                <input type="radio" name="question2" id="7"value="7">
+                <label for="7">Run Time Error</label>
+                <br>
+                <input type="radio" name="question2" id="8"value="8">
+                <label for="8">Linker Error</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>3. What will be the output of the C program?</h3>
+                    <pre>
+                        int main(){
+                            int i = 3;
+                            int *j;
+                            j = &i;
+                            j++;
+                            printf("%d ",*j);
+                            return 0;
+                        }
+                    </pre>
+                </p>
+                <input type="radio" name="question3" id="9"value="9">
+                <label for="9">Linker Error</label>
+                <br>
+                <input type="radio" name="question3" id="10"value="10">
+                <label for="10">Run Time Error</label>
+                <br>
+                <input type="radio" name="question3" id="11"value="11">
+                <label for="11">Compilation Error</label>
+                <br>
+                <input type="radio" name="question3" id="12"value="12">
+                <label for="12">Garbage value</label>
+            </div><br>
+            <div>
+                 <p>
+                     <h3>4. What will be the output of the C program?</h3>
+                     <pre>
+                        int main(){
+                            char *ptr = "hello";
+                            char a[22];
+                            strcpy(a, "world");
+                            printf("\n%s %s",ptr, a);
+                            return 0;
+                        }
+                     </pre>
+                 </p>
+                 <input type="radio" id="13"name="question4" value="13">
+                 <label for="13">hello world</label>
+                 <br>
+                 <input type="radio" id="14"name="question4" value="14">
+                 <label for="14">Run Time Error</label>
+                 <br>
+                 <input type="radio" id="15"name="question4" value="15">
+                 <label for="15">Compilation Error</label>
+                 <br>
+                 <input type="radio" id="16"name="question4" value="16">
+                 <label for="16">Garbage value</label>
+                 <br>
+            </div> 
+        </section>
+
+        <!-- pointer2 -->
+        <section id="pointer2">
+            <div>
+                <p>
+                    <h3>5. What will be the output of the C program?</h3>
+                    <pre>
+                            int main()
+                            {
+                                char *ptr = "helloworld";
+                                printf(ptr + 4);
+                                return 0;
+                            }
+                </pre>
+            </p>
+                <input type="radio" name="question5" id="17"value="17">
+                <label for="17">oworld</label>
+                <br>
+                <input type="radio" name="question5" id="18"value="18">
+                <label for="18">world</label>
+                <br>
+                <input type="radio" name="question5" id="19"value="19">
+                <label for="19">hell</label>
+                <br>
+                <input type="radio" name="question5" id="20"value="20">
+                <label for="20">hello</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>6. What will be the output of the C program?</h3>
+                    <pre>
+                        #include<stdio.h>
+                            int main()
+                            {
+                                char *ptr = "2braces.com";
+                                printf("%c\n",*&*ptr);
+                                return 0;
+                            }
+                    </pre>
+                </p>
+                <input type="radio" name="question6" id="21"value="21">
+                <label for="21">Address of 2</Address></label>
+                <br>
+                <input type="radio" name="question6" id="22"value="22">
+                <label for="22">Compilation Error</label>
+                <br>
+                <input type="radio" name="question6" id="23"value="23">
+                <label for="23">2</label>
+                <br>
+                <input type="radio" name="question6" id="24"value="24">
+                <label for="24">Run Time Error</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>7. What will be the output of the C program?</h3>
+                    <pre>
+                            int main(){
+                                register a = 1;
+                                int far *ptr;
+                                ptr = &a;
+                                printf("%u",ptr);
+                                return 0;
+                            }
+                    </pre>
+                </p>
+                <input type="radio" name="question7" id="25"value="25">
+                <label for="25">Address of a</label>
+                <br>
+                <input type="radio" name="question7" id="26"value="26">
+                <label for="26">Run Time Error</label>
+                <br>
+                <input type="radio" name="question7" id="27"value="27">
+                <label for="27">Garbage value</label>
+                <br>
+                <input type="radio" name="question7" id="28"value="28">
+                <label for="28">Compilation Error</label>
+            </div><br>
+            <div>
+                 <p>
+                     <h3>8. What will be the output of the C program?</h3>
+                     <pre>
+                            int main(){
+                                char a = 30, b = 5;
+                                char *p = &a, *q = &b;
+                                printf("%d", p - q);
+                                return 0;
+                            }
+                     </pre>
+                 </p>
+                 <input type="radio" id="29"name="question8" value="29">
+                 <label for="29">1</label>
+                 <br>
+                 <input type="radio" id="30"name="question8"value="30">
+                 <label for="30">Run Time Error</label>
+                 <br>
+                 <input type="radio" id="31"name="question8" value="31">
+                 <label for="31">Compilation Error</label>
+                 <br>
+                 <input type="radio" id="32"name="question8" value="32">
+                 <label for="32">25</label>
+                 <br>
+                 <input type="button" id="button1" name="" value="submit" onclick="pointer()">
+            </div> 
+        </section>
+        <!-- datatype1 -->
+        <section id="datatype1">
+            <div>
+                <p>
+                    <h3>1. What will be the output of the C program?</h3>
+                    <pre>
+                            int main()
+                            {
+                                char num = '\010';
+                                printf("%d", num);
+                                return 0;
+                            }
+                </pre>
+            </p>
+                <input type="radio" name="question9" id="33"value="010">
+                <label for="33">010</label>
+                <br>
+                <input type="radio" name="question9" id="34"value="08">
+                <label for="34">08</label>
+                <br>
+                <input type="radio" name="question9" id="35"value="10">
+                <label for="35">10</label>
+                <br>
+                <input type="radio" name="question9" id="36"value="8">
+                <label for="36">8</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>2. What will be the output of the C program?</h3>
+                    <pre>
+                        int main()
+                        {
+                            void  num=10;
+                            printf("%v", num);
+                            return 0;
+                        }                     
+                    </pre>
+                </p>
+                <input type="radio" name="question10" id="37"value="3">
+                <label for="37">Compilation Error</Address></label>
+                <br>
+                <input type="radio" name="question10" id="38"value="3">
+                <label for="38">10</label>
+                <br>
+                <input type="radio" name="question10" id="39"value="3">
+                <label for="39">Garbage value</label>
+                <br>
+                <input type="radio" name="question10" id="40"value="3">
+                <label for="40">0</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>3. What will be the output of the C program?</h3>
+                    <pre>
+                        int main()
+                        {
+                            void *ptr;
+                            int  num = 10;
+                            ptr = &num;
+                            printf("%d", ptr);
+                            return 0;
+                        }
+                    </pre>
+                </p>
+                <input type="radio" name="question11" id="41"value="4">
+                <label for="41">10</label>
+                <br>
+                <input type="radio" name="question11" id="42"value="4">
+                <label for="42">Compilation Error</label>
+                <br>
+                <input type="radio" name="question11" id="43"value="4">
+                <label for="43">0</label>
+                <br>
+                <input type="radio" name="question11" id="44"value="4">
+                <label for="44">Address</label>
+            </div><br>
+            <div>
+                 <p>
+                     <h3>4. What will be the output of the C program?</h3>
+                     <pre>
+                            int main()
+                            {
+                                printf("%d\t",sizeof(2.5));
+                                printf("%d\t",sizeof(2));
+                                printf("%d",sizeof('A'));
+                                return 0;
+                            }
+                     </pre>
+                 </p>
+                 <input type="radio" id="45"name="question12"  value="algorithm9">
+                 <label for="45">8 4 2</label>
+                 <br>
+                 <input type="radio" id="46"name="question12" value="9">
+                 <label for="46">8 4 1</label>
+                 <br>
+                 <input type="radio" id="47"name="question12"  value="algorithm">
+                 <label for="47">4 4 1</label>
+                 <br>
+                 <input type="radio" id="48"name="question12"  value="syntax error">
+                 <label for="48">2 5 2 A</label>
+                 <br>
+            </div> 
+        </section>
+                <!-- datatype2 -->
+                <section id="datatype2">
+                    <div>
+                        <p>
+                            <h3>5. Which of the following data type is right in C programming?</h3>
+                        </p>
+                        <input type="radio" name="question13" id="49"value="00">
+                        <label for="49">long long double</label>
+                        <br>
+                        <input type="radio" name="question13" id="50"value="01">
+                        <label for="50">unsigned long long int</label>
+                        <br>
+                        <input type="radio" name="question13" id="51"value="10">
+                        <label for="51">long double int</label>
+                        <br>
+                        <input type="radio" name="question13" id="52"value="11">
+                        <label for="52">unsigned long double</label>
+                    </div><br>
+                    <div>
+                        <p>
+                            <h3>6. Which one of the following is incorrect?</h3>
+                        </p>
+                        <input type="radio" name="question14" id="53"value="6">
+                        <label for="53">enum fruits={apple,banana}f;</label>
+                        <br>
+                        <input type="radio" name="question14" id="54"value="9">
+                        <label for="54">enum fruits{apple,banana}f;</label>
+                        <br>
+                        <input type="radio" name="question14" id="55"value="5">
+                        <label for="55">error fruits{apple,banana};</label>
+                        <br>
+                        <input type="radio" name="question14" id="56"value="error">
+                        <label for="56">enum f{apple,banana};</label>
+                    </div><br>
+                    <div>
+                        <p>
+                            <h3>7.What will be the output of the C program?</h3>
+                            <pre>
+                                int main(){
+                                    float me = 5.25;
+                                    double you = 5.25;
+                                    if(me == you)
+                                        printf("I love U");
+                                    else
+                                        printf("I hate U");
+                                    return 0;
+                                }
+                            </pre>
+                        </p>
+                        <input type="radio" name="question15" id="57"value="1">
+                        <label for="57">Compilation Error</label>
+                        <br>
+                        <input type="radio" name="question15" id="58"value="0">
+                        <label for="58">I love U</label>
+                        <br>
+                        <input type="radio" name="question15" id="59"value="3">
+                        <label for="59">Run Time Error</label>
+                        <br>
+                        <input type="radio" name="question15" id="60"value="error">
+                        <label for="60">I hate U</label>
+                    </div><br>
+                    <div>
+                         <p>
+                             <h3>8. What will be the output of the C program?</h3>
+                             <pre>
+                                    int main()
+                                        {
+                                            extern int num;
+                                            num = 5;
+                                            printf("%d", num);
+                                            return 0;
+                                        }
+                             </pre>
+                         </p>
+                         <input type="radio" id="61"name="question16" value="algorithm9">
+                         <label for="61">Compilation Error</label>
+                         <br>
+                         <input type="radio" id="62"name="question16"value="9">
+                         <label for="62">linker Error</label>
+                         <br>
+                         <input type="radio" id="63"name="question16" value="algorithm">
+                         <label for="63">Run Time Error</label>
+                         <br>
+                         <input type="radio" id="64"name="question16" value="syntax error">
+                         <label for="64">5</label>
+                         <br>
+                         <input type="button" id="button2" name="" value="submit" onclick="datatype()">
+                    </div> 
+                </section>
+                <!-- print1 -->
+        <section id="print1">
+            <div>
+                <p>
+                    <h3>1. What will be the output of the C program?</h3>
+                    <pre>
+                            int main()
+                            {
+                                printf("%d",printf("2braces.com"));
+                                return 0;
+                            }
+                </pre>
+            </p>
+                <input type="radio" name="question17" id="65"value="010">
+                <label for="65">Compilation Error</label>
+                <br>
+                <input type="radio" name="question17" id="66"value="08">
+                <label for="66">Run Time Error</label>
+                <br>
+                <input type="radio" name="question17" id="67"value="10">
+                <label for="67">2braces.com</label>
+                <br>
+                <input type="radio" name="question17" id="68"value="8">
+                <label for="68">2braces.com11</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>2. What will be the output of the C program?</h3>
+                    <pre>
+                        int main()
+                        {
+                            int a = 3;
+                            printf("%d");
+                            return 0;
+                        }                     
+                    </pre>
+                </p>
+                <input type="radio" name="question18" id="69"value="6">
+                <label for="69">Garbage value</Address></label>
+                <br>
+                <input type="radio" name="question18" id="70"value="9">
+                <label for="70">Run Time Error</label>
+                <br>
+                <input type="radio" name="question18" id="71"value="5">
+                <label for="71">3</label>
+                <br>
+                <input type="radio" name="question18" id="72"value="error">
+                <label for="72">Compilation Error</label>
+            </div><br>
+            <div>
+                <p>
+                    <h3>3. What will be the output of the C program?</h3>
+                    <pre>
+                        int main()
+                        {
+                            char *ptr = "Hello World";
+                            printf(ptr+2);
+                            return 0;
+                        }
+                    </pre>
+                </p>
+                <input type="radio" name="question19" id="73"value="1">
+                <label for="73">pointer cannot be initialized</label>
+                <br>
+                <input type="radio" name="question19" id="74"value="0">
+                <label for="74">lo World</label>
+                <br>
+                <input type="radio" name="question19" id="75"value="3">
+                <label for="75">Run Time Error</label>
+                <br>
+                <input type="radio" name="question19" id="76"value="error">
+                <label for="76">llo World</label>
+            </div><br>
+            <div>
+                 <p>
+                     <h3>4. What will be the output of the C program?</h3>
+                     <pre>
+                        int main()
+                        {
+                            int a = 1;
+                            printf("%d %p",a,a);
+                            return 0;
+                        }
+                     </pre>
+                 </p>
+                 <input type="radio" id="77"name="question20" value="algorithm9">
+                 <label for="77">Run Time Error</label>
+                 <br>
+                 <input type="radio" id="78"name="question20"value="9">
+                 <label for="78">1 00000001</label>
+                 <br>
+                 <input type="radio" id="79"name="question20" value="algorithm">
+                 <label for="79">1 1</label>
+                 <br>
+                 <input type="radio" id="80"name="question20" value="syntax error">
+                 <label for="80">%p is not a format specifier</label>
+                 <br>
+            </div> 
+        </section>
+                <!-- print2 -->
+                <section id="print2">
+                    <div>
+                        <p>
+                            <h3>5. What will be the output of the C program?</h3>
+                            <pre>
+                                int main()
+                                {
+                                    int a = 5;
+                                    printf("%d"+1,a);
+                                    return 0;
+                                }
+                            </pre>
+                        </p>
+                        <input type="radio" name="question21" id="81"value="00">
+                        <label for="81">compilation error</label>
+                        <br>
+                        <input type="radio" name="question21" id="82"value="01">
+                        <label for="82">Run Time Error</label>
+                        <br>
+                        <input type="radio" name="question21" id="83"value="10">
+                        <label for="83">5</label>
+                        <br>
+                        <input type="radio" name="question21" id="84"value="11">
+                        <label for="84">d</label>
+                    </div><br>
+                    <div>
+                        <p>
+                            <h3>6. What will be the output of the C program?</h3>
+                            <pre>
+                                int main()
+                                {
+                                    int a = 5;
+                                    printf("%dha"+2,a);
+                                    return 0;
+                                }
+                            </pre>
+                        </p>
+                        <input type="radio" name="question22" id="85"value="6">
+                        <label for="85">ha</label>
+                        <br>
+                        <input type="radio" name="question22" id="86"value="9">
+                        <label for="86">5ha</label>
+                        <br>
+                        <input type="radio" name="question22" id="87"value="5">
+                        <label for="87">h</label>
+                        <br>
+                        <input type="radio" name="question22" id="88"value="error">
+                        <label for="88">dha</label>
+                    </div><br>
+                    <div>
+                        <p>
+                            <h3>7.What will be the output of the C program?</h3>
+                            <pre>
+                                int main()
+                                {
+                                    int i = 5, *ptr;
+                                    ptr = &i;
+                                    *ptr = 0;
+                                    printf("\n Number is %d",i);
+                                    return 0;
+                                }
+                            </pre>
+                        </p>
+                        <input type="radio" name="question23" id="89"value="1">
+                        <label for="89">Number is 5</label>
+                        <br>
+                        <input type="radio" name="question23" id="90"value="0">
+                        <label for="90">Compilation Error</label>
+                        <br>
+                        <input type="radio" name="question23" id="91"value="3">
+                        <label for="91">Run Time Error</label>
+                        <br>
+                        <input type="radio" name="question23" id="92"value="error">
+                        <label for="92">Number is 0</label>
+                    </div><br>
+                    <div>
+                         <p>
+                             <h3>8. What will be the output of the C program?</h3>
+                             <pre>
+                                int main()
+                                {
+                                    static int arr[5],i;
+                                    for(i=0;i<=5;i++)
+                                    printf("%d",arr[i] = 1);
+                                    return 0;
+                                }
+                             </pre>
+                         </p>
+                         <input type="radio" id="93"name="question24" value="algorithm9">
+                         <label for="93">11111</label>
+                         <br>
+                         <input type="radio" id="94"name="question24"value="9">
+                         <label for="94">111111</label>
+                         <br>
+                         <input type="radio" id="95"name="question24" value="algorithm">
+                         <label for="95">Run Time Error</label>
+                         <br>
+                         <input type="radio" id="96"name="question24" value="syntax error">
+                         <label for="96">compilation error</label>
+                         <br>
+                         <input type="button" id="button3" name="" value="submit" onclick="printque()">
+                    </div> 
+                </section>
+        </form>
+    </section>
+</body>
+
+<script>
+    function pointer(){
+    var score = 0;
+    var total_que=0;
+    var q1 = [document.quiz.question1.value,
+              document.quiz.question2.value,
+              document.quiz.question3.value,
+              document.quiz.question4.value,
+              document.quiz.question5.value,
+              document.quiz.question6.value,
+              document.quiz.question7.value,
+              document.quiz.question8.value,
+    ]
+    var ans = ["1","7","12","13","17","23","28","29"];
+    for (var i = 0; i < q1.length; i++) {
+        if(q1[i]!="")
+        total_que++;
+        if (q1[i] == ans[i])
+            score++;
+    }
+    if (confirm("Do you really want to submit")){
+        document.write("Total que attempted by you = "+total_que+"<br>"+"your score is : " + score);
+    }
+
+}
+function datatype() {
+    var score = 0;
+    var total_que=0;
+    var q1 = [
+        document.quiz.question9.value,
+        document.quiz.question10.value,
+        document.quiz.question11.value,
+        document.quiz.question12.value,
+        document.quiz.question13.value,
+        document.quiz.question14.value,
+        document.quiz.question15.value,
+        document.quiz.question16.value,
+    ]
+    var ans = ["8","3","4","9","11","6","error","9"];
+    for (var i = 0; i < q1.length; i++) {
+        if(q1[i]!="")
+        total_que++;
+        if (q1[i] == ans[i])
+            score++;
+    }
+    if (confirm("Do you really want to submit")){
+        document.write("Total que attempted by you = "+total_que+"<br>"+"your score is : " + score);
+    }
+}
+function printque() {
+    var score = 0;
+    var total_que=0;
+    var q1 = [document.quiz.question17.value,
+        document.quiz.question18.value,
+        document.quiz.question19.value,
+        document.quiz.question20.value,
+        document.quiz.question21.value,
+        document.quiz.question22.value,
+        document.quiz.question23.value,
+        document.quiz.question24.value,
+    ]
+    var ans = ["8","6","error","9","11","6","error","9"];
+    for (var i = 0; i < q1.length; i++) {
+        if(q1[i]!="")
+        total_que++;
+        if (q1[i] == ans[i])
+            score++;
+    }
+    if (confirm("Do you really want to submit")){
+        document.write("Total que attempted by you = "+total_que+"<br>"+"your score is : " + score);
+    }
+}
+</script>
+</html>

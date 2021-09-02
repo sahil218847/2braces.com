@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: black;
+    color:white;
+}
+a{
+    color:green;
+}
+header{
+    border-bottom: 2px solid green;
+}
+.navbar ul{
+    display:flex;
+    list-style: none;
+    float:right;
+    margin-top:-74px;
+    padding-right: 30px;
+}
+.navbar li {
+    margin-left:40px; 
+    /* float:right; */
+    font-size:25px;
+}
+.navbar li a{
+    text-decoration:none;
+}
+.navbar li img{
+    width:20px;
+    height: 20px;
+}
+#left{
+    border-right: 8px solid green;
+    width: 50px;
+    height: 379px;
+    padding-top: 180px;
+    /* background-color: black; */
+}
+#left img{
+    width:50px;
+    height: 50px;
+    margin-top:20px;
+    background-color: black;
+}
+#mid{
+    border-right: 8px solid white;
+    margin-left:70px;
+    width:343px;
+    height: 566px;
+    /* height: 20px; */
+    margin-top:-560px;
+}
+.heading1{
+    list-style: none;
+    font-size:30px;
+    padding-top: 20px;
+}
+.heading2 {
+    list-style: none;
+    font-size:20px;
+    padding-top: 10px;
+    margin-left: 40px;
+
+}
+.heading2 a{
+    text-decoration: none;
+}
+#right{
+    /* border: 2px solid blue; */
+    margin-left: 433px;
+    margin-top: -548px;
+    font-size:20px;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-y: scroll;
+    height:541px;
+    width:913px;
+}
+#button1,#button2,#button3{
+    background-color: black;
+    box-shadow:2px 2px green,6px 6px white,8px 8px black;
+    /* box-shadow:-1px -1px green,-2px -2px white,-3px -3px black; */
+    text-shadow: 2px 2px yellow;
+    color: white;
+    font-size: 50px;
+    border: 3px outset black;
+    border-radius: 20px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+}
+#pointer2,#datatype1,#datatype2,#print1,#print2{
+    display: none;
+}
+label:hover{
+    cursor: pointer;
+}
